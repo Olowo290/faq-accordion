@@ -85,6 +85,9 @@ article.active .faq-body {
 }
 
 @media screen and (width < 400px) {
+  main {
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+  }
   section {
     width: 320px;
   }

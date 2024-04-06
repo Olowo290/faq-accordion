@@ -1,0 +1,91 @@
+@font-face {
+  font-family: worksans-bold;
+  src: url(./assets/fonts/static/WorkSans-Bold.ttf);
+}
+@font-face {
+  font-family: worksans-reg;
+  src: url(./assets/fonts/static/WorkSans-Regular.ttf);
+}
+@font-face {
+  font-family: worksans-Sbold;
+  src: url(./assets/fonts/static/WorkSans-SemiBold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  background-image: url(./assets/images/background-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 0% -50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+section {
+  width: 400px;
+  background-color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
+.head {
+  display: flex;
+  gap: 10px;
+}
+article {
+  margin-bottom: 5px;
+  padding: 0.7em 0;
+}
+article:not(:last-child, :first-child) {
+  border-bottom: 1px solid hsl(275, 100%, 97%);
+}
+h1 {
+  font-family: 'worksans-bold';
+  font-size: 2rem;
+}
+
+.faq-question {
+  margin-bottom: 10px;
+  font-family: 'worksans-Sbold';
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-question:hover {
+  color: hsl(293, 93%, 53%);
+  cursor: pointer;
+}
+.icon {
+  cursor: pointer;
+}
+.minus-icon {
+  display: none;
+}
+article.active .minus-icon {
+  display: block;
+}
+article.active .plus {
+  display: none;
+}
+.faq-body {
+  font-family: 'worksans-reg';
+  font-size: 0.8rem;
+  display: none; /* by default hide it*/
+  opacity: 0;
+  color: hsl(292, 16%, 49%);
+}
+
+article.active .faq-body {
+  display: block;
+  opacity: 1;
+}
+
+@media screen and (width < 400px) {
+  section {
+    width: 320px;
+  }
+}
